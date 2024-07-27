@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+  <title>Slider</title>
+  <link rel="stylesheet" href="Slider.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="main" data-carousel>
+    <div class="carousel" data-slides>
+      <div class="person-holder slide" data-active>
+        <div class="avatar-holder">
+          <img src="images/image-tanya.jpg" alt="Tanya" class="avatar">
+          <div class="slideButtons">
+            <img src="images/icon-prev.svg" alt="Previous" id="previous" class="button" data-carousel-button="prev">
+            <img src="images/icon-next.svg" alt="Next" id="next" class="button" data-carousel-button="next">
+          </div>
+        </div>
+  
+        <img src="images/pattern-bg.svg" alt="Pattern"  class="background-image">
+  
+        <div class="text">
+          <p class="p">
+            <img src="images/pattern-quotes.svg" alt="Quotes Image" class="quotes">
+            “ I’ve been interested in coding for a while but never taken the jump, until now.
+            I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+            excited about the future. ”
+          </p>
+    
+          <div class="experience">
+            <p class="name">Tanya Sinclair</p>
+            <p class="job">UX Engineer</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="person-holder slide">
+        <div class="avatar-holder">
+          <img src="images/image-john.jpg" alt="John" class="avatar">
+          <div class="slideButtons">
+            <img src="images/icon-prev.svg" alt="Previous" id="previous" class="button" data-carousel-button="prev">
+            <img src="images/icon-next.svg" alt="Next" id="next" class="button" data-carousel-button="next">
+          </div>
+        </div>
+
+        <img src="images/pattern-bg.svg" alt="Pattern" class="background-image">
+
+        <div class="text">
+          <p class="p">      
+            <img src="images/pattern-quotes.svg" alt="Quotes Image" class="quotes">
+            “ If you want to lay the best foundation possible I’d recommend taking this course. 
+            The depth the instructors go into is incredible. I now feel so confident about 
+            starting up as a professional developer. ”
+          </p>
+      
+          <div class="experience">
+            <p class="name">John Tarkpor</p>  
+            <p class="job">Junior Front-end Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="Slider.js"></script>
+</body>
+</html>

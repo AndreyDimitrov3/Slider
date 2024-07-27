@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Inter';
+    font-size: 32px;
+    color: hsl(240, 38%, 20%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('images/pattern-curve.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+.main{
+    width: 77%;
+    max-width: 100%;
+    height: 58%;
+    max-height: 570px;
+}
+
+.carousel{
+    position: relative;
+    height: 100%;
+}
+
+.person-holder{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+}
+
+.person-holder[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
+
+.avatar-holder{
+    position: relative;
+    height: 100%;
+}
+
+.avatar{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    transition-delay: 200ms;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 20px;
+}
+
+.background-image{
+    position: absolute;
+    right: -4%;
+}
+
+.text{
+    transition-delay: 0ms !important;
+}
+
+.p{
+    position: relative;
+    z-index: 1;
+    width: 112%;
+    font-weight: 300;
+    line-height: 44px;
+    transition-delay: 0ms !important;
+}
+
+.quotes{
+    position: absolute;
+    top: -64px;
+    left: 15%;
+}
+
+.experience{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.job{
+    margin: 0;
+    font-size: 20px;
+    color: hsl(240, 18%, 77%);
+}
+
+.slideButtons{
+    position: absolute;
+    z-index: 2;
+    bottom: -29px;
+    left: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 58px;
+    width: 115px;
+    border-radius: 34px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px;
+}
+
+.button{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1700px){
+    .main{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .main{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .main{
+        width: 87%;
+    }
+}
+
+@media screen and (max-height: 750px), (max-width: 1000px){
+    body{
+        justify-content: normal;
+        background-image: none;
+    }
+
+    .main{
+        margin-top: 130px;
+    }
+
+    .person-holder{
+        flex-direction: column;
+    }
+
+    .avatar-holder{
+        position: relative;
+        min-height: 475px;
+    }
+
+    .background-image{
+        max-width: 640px;
+        width: 100%;
+        top: 240px;
+        right: auto;
+        transform: translateY(-50%);
+    }
+
+    .p{
+        margin-top: 150px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .quotes{
+        top: -56px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .experience{
+        justify-content: center;
+    }
+
+    .slideButtons{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .experience{
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .main {
+        width: 92%;
+        margin-top: 100px
+    }
+
+    .avatar-holder {
+        min-height: 430px;
+    }
+
+    .background-image {
+        max-width: 560px;
+        top: 215px;
+    }
+
+    .p{
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .avatar-holder {
+        min-height: 370px;
+    }
+
+    .background-image {
+        max-width: 490px;
+        top: 186px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .avatar-holder {
+        min-height: 320px;
+    }
+
+    .background-image {
+        max-width: 400px;
+        top: 155px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .avatar-holder {
+        min-height: 280px;
+    }
+
+    .background-image {
+        max-width: 360px;
+        top: 138px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .background-image {
+        max-width: 325px;
+        top: 128px;
+    }
+}
